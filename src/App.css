@@ -1,40 +1,48 @@
-header {
-  height: 30px;
-}
-.main-header {
-  height: 60px;
+html, body, .flex-container {
+  margin: 0;
+  height: 100vh;
 }
 
-.no-padding {
-  padding-left: 0!important;
-  padding-right: 0!important;
+.flex-container, .flex-child {
+  display: flex;
+  width: 100%;
 }
 
-.scroller {
-  position: absolute;
+.flex-child {
+  flex-direction: column;
+}
+
+.flex-item1, .flex-item3 {
+  flex: 0 1 50px;
+}
+
+.flex-item1 {
+  background-color: rgb(40, 150, 115);
+}
+
+.flex-item2 {
+  background-color: rgb(55, 159, 60);
+}
+
+.flex-item2, .flex-item4 {
+  flex: 1;
   overflow: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 
-.screensize {
-  height: calc(100vh - 90px);
+.flex-item3 {
+  background-color: rgb(8, 71, 191);
 }
 
-.textarea {
-  /*background-color: rgb(225, 171, 250);*/
-}
+.flex-item4 {
+  background-color: rgb(166, 166, 81);
 
-.previewarea {
-  /*background-color: rgb(141, 179, 143);*/
-  position: relative;
 }
 
 textarea {
-  resize: none;
   width: 100%;
-  height: 100%;
   border: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  resize: none;
 }
