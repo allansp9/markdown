@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { placeholder } from './placeholder';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
   constructor(props) {
@@ -19,21 +20,36 @@ class App extends Component {
 
   render () {
     return (
-        <div className="container">
-          <header>
-            <h1>Markdown Previewer</h1>
-          </header>
-          <section className='textArea'>
-            <h1>Editor</h1>
-            <textarea onChange={this.handleUserInput} value={this.state.userInput} />
-          </section>
-
-          <section className='previewArea'>
-            <div className='scroller'>
-              <h1>Previewer</h1>
-              <ReactMarkdown source={this.state.userInput}/>
+        <div className="container-fluid">
+            <div className="row">
+              <div className="col no-padding">
+                <header className="main-header border">
+                  <h1>Markdown Previewer</h1>
+                </header>
+              </div>
             </div>
-          </section>
+             <div className="row">
+              <div className="col no-padding">
+                <section className='textarea screensize'>
+                  <header className="border">
+                    <h5>MARKDOWN</h5>
+                  </header>
+                  <textarea onChange={this.handleUserInput} value={this.state.userInput}/>
+                </section>
+              </div>
+
+              <div className="col no-padding">
+                <header className="border">
+                  <h5>PREVIEW</h5>
+                </header>
+                <section className='previewarea screensize'>
+
+                  <div className='scroller'>
+                    <ReactMarkdown source={this.state.userInput}/>
+                  </div>
+                </section>
+              </div>
+            </div>
         </div>
     );
   }
