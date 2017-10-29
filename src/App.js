@@ -20,24 +20,13 @@ class App extends Component {
   render () {
 
     return (
-      <div>
-        <header>
-          <div class="header">
-            <h5>MARKDOWN - <small>Type your markdown here.</small></h5>
-          </div>
-          <div class="header">
-            <h5>PREVIEW - <small>See the preview here.</small></h5>
-          </div>
-        </header>
-          <main id="content">
-            <div id="flex-one">
-              <textarea onChange={this.handleUserInput} value={this.state.userInput} autoFocus />
-            </div>
-            <div id="flex-two">
-              <ReactMarkdown source={this.state.userInput}/>
-            </div>
-          </main>
-          <footer>...</footer>
+      <div class="flex-container">
+        <div class="flex-1">
+          <textarea onChange={this.handleUserInput} value={this.state.userInput} autoFocus />
+        </div>
+        <div class="flex-2">
+          <ReactMarkdown source={this.state.userInput}/>
+        </div>
       </div>
     );
   }
