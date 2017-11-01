@@ -20,13 +20,14 @@ class App extends Component {
   render () {
 
     return (
-      <div class="flex-container">
-        <div class="flex-1">
+      <div className="flex-container">
+        <div className="flex-1">
           <textarea onChange={this.handleUserInput} value={this.state.userInput} autoFocus />
         </div>
-        <div class="flex-2">
+        <div className="flex-2">
           <ReactMarkdown source={this.state.userInput}/>
         </div>
+        <footer><p><a href="https://github.com/allansp9/markdown" target="_blank" rel="noopener noreferrer">GitHub</a> / <a href="mailto:allansp9@gmail.com">allansp9@gmail.com</a></p></footer>
       </div>
     );
   }
