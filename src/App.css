@@ -37,21 +37,20 @@ textarea {
 }
 
 footer {
+  display: flex;
   flex: 0 0 100%;
   height: 60px;
-  /*position: static;*/
   background-color: rgb(162, 83, 255);
-  position: relative;
   font-family: 'Malgun Gothic', sans-serif;
-  /*font-weight: ;*/
   color: white;
+  justify-content: center;
+  align-items: center;
 }
 
-footer > p {
-  position: absolute;
-  right: 10px;
+footer > div {
+  margin-right: 10px;
+  margin-left: 10px;
 }
-
 footer a {
   color: white;
 }

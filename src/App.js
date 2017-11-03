@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
+import Icon from 'react-component-bytesize-icons';
 import { placeholder } from './placeholder';
 
 class App extends Component {
@@ -27,7 +28,10 @@ class App extends Component {
         <div className="flex-2">
           <ReactMarkdown source={this.state.userInput}/>
         </div>
-        <footer><p><a href="https://github.com/allansp9/markdown" target="_blank" rel="noopener noreferrer">GitHub</a> / <a href="mailto:allansp9@gmail.com">allansp9@gmail.com</a></p></footer>
+        <footer>
+          <div><a href="https://github.com/allansp9/markdown" target="_blank" rel="noopener noreferrer"><Icon name="github" size="regular"/></a></div>
+           <div><a href="mailto:allansp9@gmail.com"><Icon name="mail" size="regular"/></a></div>
+         </footer>
       </div>
     );
   }
